@@ -7,18 +7,25 @@ import java.util.Stack;
 
 /**
  * 解析器，解析计算式，将输入计算式转换为后缀树表达形式，例如 1 + 3 转化为 1 3 +
- * 同时提供计算后缀树功能
+ * 同时提供计算功能
  */
 public class Parser {
 
     private Stack<String> stack = new Stack<String>(); //转换计算式所用的栈
+    private BasicOperation add = new OperationAdd();
+    private BasicOperation sub = new OperationSub();
+    private BasicOperation mul = new OperationMul();
+    private BasicOperation div = new OperationDiv();
+    private SelfOperation sqr = new OperationSqrt();
+    private SelfOperation squ = new OperationSquare();
+    private SelfOperation fra = new OperationFraction();
 
     /**
      * 将输入中缀计算式转化为后缀树形式
      * @param equation 中缀计算式
      * @return 后缀树形式计算式
      */
-    private List<String> infix2suffix(String equation) {
+    public List<String> infix2suffix(String equation) {
         List<String> infixList = new ArrayList<String>();
         List<String> suffixList = new ArrayList<String>();
         int len = equation.length();
@@ -53,7 +60,6 @@ public class Parser {
             sb = new StringBuilder();
             infixList.add(equation.charAt(i) + "");
         }
-        System.out.println(infixList);
         for (String s : infixList) {
             if (s.matches("[0-9]+")) {
                 suffixList.add(s);
@@ -88,45 +94,81 @@ public class Parser {
         while (!stack.isEmpty()) {
             suffixList.add(stack.pop());
         }
-        return null;
+        return suffixList;
     }
 
     /**
-     * 计算输入计算式的值，计算式形式为计算式前后均为数字或括号字符且计算式格式
-     * 正确，无重复运算符或符号。若计算式中没有括号，则按照由左向右计算。
+     * 计算输入计算式的值，计算式形式为计算式前后均为数字或括号且计算式格式
+     * 正确，无重复运算符或符号。若计算式中没有括号，则按照符号优先级进行计算。
      * @param equation 待计算的计算式
      * @return 计算结果，为浮点形式
      */
-    public double calculate(String equation) {
+    public double calculateInOrder(String equation) {
         List<String> suffixList = infix2suffix(equation);
         stack.clear();
+        System.out.println(suffixList);
         for (String s : suffixList) {
             if (s.matches("[0-9]+")) {
                 stack.push(s);
             }
             if (s.matches("[\\+\\-×÷]")) {
-                switch (s) {
-                    case "+": {
+                stack.push(String.valueOf(binaryCalculate(stack.pop(), stack.pop(), s)));
+            }
+        }
+        return Double.valueOf(stack.pop());
+    }
 
-                        break;
-                    }
-                    case "-": {
-
-                        break;
-                    }
-                    case "×": {
-
-                        break;
-                    }
-                    case "÷": {
-
-                        break;
-                    }
-                }
+    /**
+     * 二元计算
+     * @param a 数字形式字符串
+     * @param b 数字形式字符串
+     * @param type 运算类型
+     * @return 浮点型运算结果
+     */
+    public double binaryCalculate(String a, String b, String type) {
+        switch (type) {
+            case "+": {
+                add.setNumberA(Double.valueOf(a));
+                add.setNumberB(Double.valueOf(b));
+                return add.getResult();
+            }
+            case "-": {
+                sub.setNumberA(Double.valueOf(a));
+                sub.setNumberB(Double.valueOf(b));
+                return sub.getResult();
+            }
+            case "×": {
+                mul.setNumberA(Double.valueOf(a));
+                mul.setNumberB(Double.valueOf(b));
+                return mul.getResult();
+            }
+            case "÷": {
+                div.setNumberA(Double.valueOf(a));
+                div.setNumberB(Double.valueOf(b));
+                return div.getResult();
             }
         }
         return -1;
     }
+
+    public double singleCalculate(String a, String type) {
+        switch (type) {
+            case "ROOT": {
+                sqr.setNumber(Double.valueOf(a));
+                return sqr.getResult();
+            }
+            case "SQUARE": {
+                squ.setNumber(Double.valueOf(a));
+                return squ.getResult();
+            }
+            case "FRACTION": {
+                fra.setNumber(Double.valueOf(a));
+                return fra.getResult();
+            }
+        }
+        return -1;
+    }
+
 
     /**
      * 比较计算符的优先级

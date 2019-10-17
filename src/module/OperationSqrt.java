@@ -3,6 +3,6 @@ package module;
 public class OperationSqrt extends SelfOperation{
     @Override
     public double getResult(){
-        return 0;
+        return Math.sqrt(getNumber());
     }
 }
