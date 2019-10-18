@@ -373,7 +373,7 @@ public class interfaceController {
     }
 
     private void updateCalculate(String op) {
-        parser.calculate("");
+        parser.calculate(op);
     }
 
     /**

@@ -1,5 +1,4 @@
 package module;
-
 import static java.lang.Math.sqrt;
 
 public class OperationSqrt extends SelfOperation{
