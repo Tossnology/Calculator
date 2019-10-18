@@ -98,6 +98,7 @@ public class interfaceController {
     @FXML
     private Button zero_btn;
 
+    private double ans = 0; // 答案值，保存临时计算结果
     private boolean calculated = false; // 记录在键入下一个字符前，是否刚刚经过了计算
     private Parser parser = new Parser(); // 解析器
     private List<String> equationList = new ArrayList<String>(); //保存当前在计算器输入的计算式内容
@@ -125,25 +126,21 @@ public class interfaceController {
     @FXML
     void handleFraction(ActionEvent event) {
         updateEquationText(ButtonMapper.FRACTION_BTN);
-        updateCalculate(ButtonMapper.FRACTION_BTN);
     }
 
     @FXML
     void handleRoot(ActionEvent event) {
         updateEquationText(ButtonMapper.ROOT_BTN);
-        updateCalculate(ButtonMapper.ROOT_BTN);
     }
 
     @FXML
     void handleSquare(ActionEvent event) {
         updateEquationText(ButtonMapper.SQUARE_BTN);
-        updateCalculate(ButtonMapper.SQUARE_BTN);
     }
 
     @FXML
     void handleDivision(ActionEvent event) {
         updateEquationText(ButtonMapper.DIVISION_BTN);
-        updateCalculate(ButtonMapper.DIVISION_BTN);
     }
 
     @FXML
@@ -164,7 +161,6 @@ public class interfaceController {
     @FXML
     void handleMul(ActionEvent event) {
         updateEquationText(ButtonMapper.MULTIPLY_BTN);
-        updateCalculate(ButtonMapper.MULTIPLY_BTN);
     }
 
     @FXML
@@ -185,7 +181,6 @@ public class interfaceController {
     @FXML
     void handleMinus(ActionEvent event) {
         updateEquationText(ButtonMapper.MINUS_BTN);
-        updateCalculate(ButtonMapper.MINUS_BTN);
     }
 
     @FXML
@@ -206,7 +201,6 @@ public class interfaceController {
     @FXML
     void handleAdd(ActionEvent event) {
         updateEquationText(ButtonMapper.ADD_BTN);
-        updateCalculate(ButtonMapper.ADD_BTN);
     }
 
     @FXML
@@ -222,7 +216,7 @@ public class interfaceController {
 
     @FXML
     void handleEqual(ActionEvent event) {
-        updateCalculate(ButtonMapper.EQUAL_BTN);
+        updateEquationText(ButtonMapper.EQUAL_BTN);
     }
 
     @FXML
@@ -287,6 +281,9 @@ public class interfaceController {
                 if (event.getCode() == KeyCode.ENTER) {
                     handleEqual(new ActionEvent());
                 }
+                if (event.getCode() == KeyCode.SPACE) {
+                    handleEqual(new ActionEvent());
+                }
                 if (event.getCode() == KeyCode.ESCAPE) {
                     handleClear(new ActionEvent());
                 }
@@ -295,9 +292,9 @@ public class interfaceController {
     }
 
     /**
-     * 更新计算器算式栏显示内容
+     * 更新计算器显示内容
      * 根据传入不同字符决定不同处理方式
-     * @param etext 在算式栏即将添加的内容
+     * @param etext 即将添加的内容
      */
     private void updateEquationText(String etext) {
         //处理数字相关内容
@@ -305,34 +302,54 @@ public class interfaceController {
             if (answer_text.getText().equals("0")) {
                 answer_text.setText("");
             }
-            // case1: answer text has number, not yet calculate, then append number
+            // case1: answer text has number, not yet calculateInOrder, then append number
             if (!calculated) {
                 answer_text.setText(answer_text.getText() + etext);
-                return;
             }
-            // case2: answer text has number, has been calculate, then clear answer text and fill number
+            // case2: answer text has number, has been calculateInOrder, then clear answer text and fill number
             if (calculated) {
                 answer_text.setText(etext);
-                return;
             }
             // case3: answer text has no number
-            answer_text.setText(etext);
-            return;
+            if (answer_text.getText().isEmpty()) {
+                answer_text.setText(etext);
+            }
+            calculated = false;
         }
         //处理运算符相关内容（不含括号）
         if (etext.matches("[\\+\\-×÷]")) {
             //case1: 在输入运算符之前没有发生计算，则连接答案栏和算式栏的式子，形式为 <算式栏><答案栏><运算符>
             if (!calculated) {
+                //ans = parser.calculateInOrder(equation_text.getText() + answer_text.getText());  //计算
+                String lastOp = getEqautionLastOperation(equation_text.getText());
+                if (lastOp != null) {
+                    ans = parser.binaryCalculate(String.valueOf(ans), answer_text.getText(), lastOp);
+                } else {
+                    ans = Double.valueOf(answer_text.getText());
+                }
                 equation_text.setText(equation_text.getText() + answer_text.getText() + etext);
-                answer_text.setText("0"); //TODO 待修改
-                return;
+                answer_text.setText(String.valueOf(ans));
+                calculated = true;
             }
             //case2: 在输入运算符之前发生了计算，则修改算式栏中最后一个运算符
             if (calculated) {
-                String tmp = equation_text.getText().substring(0,equation_text.getText().length()-1);
-                equation_text.setText(tmp + etext);
+                String tmp;
+                if (!equation_text.getText().equals("")) {
+                    tmp = equation_text.getText().substring(0,equation_text.getText().length()-1) + etext;
+                } else {
+                    tmp = String.valueOf(ans) + etext;
+                }
+                equation_text.setText(tmp);
             }
-            return;
+        }
+        if (etext.equals(ButtonMapper.ROOT_BTN)
+            || etext.equals(ButtonMapper.FRACTION_BTN)
+            || etext.equals(ButtonMapper.SQUARE_BTN)) {
+            if (answer_text.getText().isEmpty()) {
+                return;
+            }
+            answer_text.setText(String.valueOf(parser.singleCalculate(answer_text.getText(), etext)));
+            clearEquationText();
         }
         //处理小数点
         if (etext.equals(ButtonMapper.DOT_BTN)) {
@@ -341,12 +358,12 @@ public class interfaceController {
                 return;
             }
             answer_text.setText(answer_text.getText() + etext);
-            return;
         }
         //处理计算器操作键相关内容
         if (etext.equals(ButtonMapper.CLEAR_BTN)
             || etext.equals(ButtonMapper.CLEAR_ERROR_BTN)
-            || etext.equals(ButtonMapper.BACKSPACE_BTN)) {
+            || etext.equals(ButtonMapper.BACKSPACE_BTN)
+            || etext.equals(ButtonMapper.EQUAL_BTN)) {
 
             // 退格键
             if (etext.equals(ButtonMapper.BACKSPACE_BTN)) {
@@ -356,32 +373,48 @@ public class interfaceController {
                 }
                 //case2：如果未计算且答案栏显示的是单个数字，则变为0
                 if (answer_text.getText().matches("[0-9]")) {
-                    answer_text.setText("0");
+                    setAnswerText("0");
                 }
                 //case3：如果未计算且答案栏显示多个数字，则删去最后一个数字
                 else {
-                    answer_text.setText(answer_text.getText().substring(0, answer_text.getText().length() - 1));
+                    setAnswerText(answer_text.getText().substring(0, answer_text.getText().length() - 1));
                 }
-                return;
             }
-
+            if (etext.equals(ButtonMapper.EQUAL_BTN)) {
+                //ans = parser.calculateInOrder(equation_text.getText() + answer_text.getText());
+                String lastOp = getEqautionLastOperation(equation_text.getText());
+                if (lastOp != null) {
+                    ans = parser.binaryCalculate(String.valueOf(ans), answer_text.getText(), lastOp);
+                } else {
+                    ans = Double.valueOf(answer_text.getText());
+                }
+                calculated = true;
+                clearEquationText();
+                setAnswerText(String.valueOf(ans));
+            }
             // C键/CE键
-            clearEquationText();
-            answer_text.setText("0");
-            return;
+            if (etext.equals(ButtonMapper.CLEAR_BTN)
+                || etext.equals(ButtonMapper.CLEAR_ERROR_BTN)) {
+                clearEquationText();
+                answer_text.setText("0");
+            }
+        }
+        //截取答案长度为13位
+        if (answer_text.getText().length() >= 14) {
+            setAnswerText(answer_text.getText().substring(0, 13));
+        }
+        //处理整型，去除小数点
+        if ((int)Double.valueOf(answer_text.getText()).doubleValue() == Double.valueOf(answer_text.getText())) {
+            setAnswerText(String.valueOf((int)Double.valueOf(answer_text.getText()).doubleValue()));
         }
     }
 
-    private void updateCalculate(String op) {
-        parser.calculate(op);
-    }
-
-    /**
-     * 设置算式栏内容
-     * @param etext 算式栏内容
-     */
     private void setEquationText(String etext) {
         equation_text.setText(etext);
+    }
+
+    private void setAnswerText(String etext) {
+        answer_text.setText(etext);
     }
 
     /**
@@ -393,6 +426,16 @@ public class interfaceController {
 
     private void clearAnswerText() {
         answer_text.setText("");
+    }
+
+    private String getEqautionLastOperation(String s) {
+        int len = s.length();
+        for (int i = len - 1; i >= 0; i--) {
+            if (s.charAt(i) > '9' || s.charAt(i) < '0') {
+                return String.valueOf(s.charAt(i));
+            }
+        }
+        return null;
     }
 
 }
