@@ -37,4 +37,14 @@ public class ParserTest {
         assertEquals(-1, p.compareOperation('+','×'));
         assertEquals(0, p.compareOperation('+','+'));
     }
+
+    @Test
+    public void binaryCalculate() {
+
+    }
+
+    @Test
+    public void singleCalculate() {
+
+    }
 }
