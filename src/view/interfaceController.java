@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.event.ActionEvent;
 import module.ButtonMapper;
@@ -21,82 +22,22 @@ import java.util.List;
 public class interfaceController {
 
     @FXML
-    private AnchorPane rootpane;
-
-    @FXML
-    private Button two_btn;
-
-    @FXML
-    private Button one_btn;
+    private VBox rootpane;
 
     @FXML
     private Text equation_text;
 
     @FXML
-    private Button percent_btn;
-
-    @FXML
-    private Button dot_btn;
-
-    @FXML
-    private Button equal_btn;
-
-    @FXML
-    private Button backspace_btn;
-
-    @FXML
-    private Button minus_btn;
-
-    @FXML
-    private Button fraction_btn;
-
-    @FXML
-    private Button addition_btn;
-
-    @FXML
-    private Button multiply_btn;
-
-    @FXML
-    private Button division_btn;
-
-    @FXML
-    private Button six_btn;
-
-    @FXML
-    private Button clearerror_btn;
-
-    @FXML
     private Text answer_text;
 
     @FXML
-    private Button seven_btn;
+    private Text answer_text1;
 
     @FXML
-    private Button three_btn;
+    private VBox rootpane1;
 
     @FXML
-    private Button four_btn;
-
-    @FXML
-    private Button square_btn;
-
-    @FXML
-    private Button eight_btn;
-
-    @FXML
-    private Button root_btn;
-
-    @FXML
-    private Button clear_btn;
-
-    @FXML
-    private Button nine_btn;
-
-    @FXML
-    private Button five_btn;
-
-    @FXML
-    private Button zero_btn;
+    private Text equation_text1;
 
     private double ans = 0; // 答案值，保存临时计算结果
     private boolean calculated = false; // 记录在键入下一个字符前，是否刚刚经过了计算
@@ -217,6 +158,57 @@ public class interfaceController {
     @FXML
     void handleEqual(ActionEvent event) {
         updateEquationText(ButtonMapper.EQUAL_BTN);
+    }
+
+
+    @FXML
+    void handleRBracket(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlePower(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handleSin(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handleCos(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handleTan(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handleExp(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handleTenPow(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handleFactorial(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlePi(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handleLBracket(ActionEvent event) {
+
     }
 
     @FXML

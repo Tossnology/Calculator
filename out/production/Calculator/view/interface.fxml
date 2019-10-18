@@ -6,171 +6,398 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="338.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.interfaceController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="338.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.interfaceController">
    <children>
       <VBox alignment="BOTTOM_CENTER" layoutY="1.0" prefHeight="501.0" prefWidth="338.0">
          <children>
-            <VBox prefHeight="476.0" prefWidth="338.0">
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="菜单">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="标准" />
+                        <MenuItem mnemonicParsing="false" text="科学" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="历史" />
+              </menus>
+            </MenuBar>
+            <StackPane prefHeight="480.0" prefWidth="338.0">
                <children>
-                  <Text fx:id="equation_text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </Text>
-                  <Text fx:id="answer_text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
-                     <font>
-                        <Font size="45.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="10.0" top="20.0" />
-                     </VBox.margin>
-                  </Text>
-                  <GridPane alignment="CENTER" prefHeight="387.0" prefWidth="338.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
+                  <VBox fx:id="rootpane" prefHeight="476.0" prefWidth="338.0">
                      <children>
-                        <Button fx:id="clearerror_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleClearError" prefHeight="73.0" prefWidth="89.0" text="CE">
+                        <Text fx:id="equation_text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
                            <font>
-                              <Font size="27.0" />
+                              <Font size="19.0" />
                            </font>
-                        </Button>
-                        <Button fx:id="backspace_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleBackSpace" prefHeight="73.0" prefWidth="89.0" text="⬅" GridPane.columnIndex="2">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Text>
+                        <Text fx:id="answer_text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
                            <font>
-                              <Font size="27.0" />
+                              <Font size="45.0" />
                            </font>
-                        </Button>
-                        <Button fx:id="percent_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handlePercent" prefHeight="73.0" prefWidth="89.0" text="\%" GridPane.columnIndex="3">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="clear_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleClear" prefHeight="73.0" prefWidth="89.0" text="C" GridPane.columnIndex="1">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="fraction_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleFraction" prefHeight="73.0" prefWidth="89.0" text="1/x" GridPane.rowIndex="1">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="root_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleRoot" prefHeight="73.0" prefWidth="89.0" text="√x" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="square_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleSquare" prefHeight="73.0" prefWidth="89.0" text="x²" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="division_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleDivision" prefHeight="73.0" prefWidth="89.0" text="÷" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="seven_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleSeven" prefHeight="73.0" prefWidth="89.0" text="7" GridPane.rowIndex="2">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="eight_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleEight" prefHeight="73.0" prefWidth="89.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="nine_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleNine" prefHeight="73.0" prefWidth="89.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="multiply_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleMul" prefHeight="73.0" prefWidth="89.0" text="×" GridPane.columnIndex="3" GridPane.rowIndex="2">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="four_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleFour" prefHeight="73.0" prefWidth="89.0" text="4" GridPane.rowIndex="3">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="five_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleFive" prefHeight="73.0" prefWidth="89.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="six_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleSix" prefHeight="73.0" prefWidth="89.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="minus_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleMinus" prefHeight="73.0" prefWidth="89.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="one_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleOne" prefHeight="73.0" prefWidth="89.0" text="1" GridPane.rowIndex="4">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="two_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleTwo" prefHeight="73.0" prefWidth="89.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="three_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleThree" prefHeight="73.0" prefWidth="89.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="addition_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleAdd" prefHeight="73.0" prefWidth="89.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="73.0" prefWidth="89.0" GridPane.rowIndex="5">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="zero_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleZero" prefHeight="73.0" prefWidth="89.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="dot_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleDot" prefHeight="73.0" prefWidth="89.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="5">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="equal_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleEqual" prefHeight="73.0" prefWidth="89.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="5">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Button>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <GridPane alignment="CENTER" prefHeight="387.0" prefWidth="338.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleClearError" prefHeight="73.0" prefWidth="89.0" text="CE">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleBackSpace" prefHeight="73.0" prefWidth="89.0" text="⬅" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handlePercent" prefHeight="73.0" prefWidth="89.0" text="\%" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleClear" prefHeight="73.0" prefWidth="89.0" text="C" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleFraction" prefHeight="73.0" prefWidth="89.0" text="1/x" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleRoot" prefHeight="73.0" prefWidth="89.0" text="√x" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleSquare" prefHeight="73.0" prefWidth="89.0" text="x²" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleDivision" prefHeight="73.0" prefWidth="89.0" text="÷" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleSeven" prefHeight="73.0" prefWidth="89.0" text="7" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleEight" prefHeight="73.0" prefWidth="89.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleNine" prefHeight="73.0" prefWidth="89.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleMul" prefHeight="73.0" prefWidth="89.0" text="×" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleFour" prefHeight="73.0" prefWidth="89.0" text="4" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleFive" prefHeight="73.0" prefWidth="89.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleSix" prefHeight="73.0" prefWidth="89.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleMinus" prefHeight="73.0" prefWidth="89.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleOne" prefHeight="73.0" prefWidth="89.0" text="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleTwo" prefHeight="73.0" prefWidth="89.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleThree" prefHeight="73.0" prefWidth="89.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleAdd" prefHeight="73.0" prefWidth="89.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="73.0" prefWidth="89.0" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleZero" prefHeight="73.0" prefWidth="89.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleDot" prefHeight="73.0" prefWidth="89.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleEqual" prefHeight="73.0" prefWidth="89.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </GridPane>
                      </children>
-                  </GridPane>
+                  </VBox>
+                  <VBox fx:id="rootpane1" prefHeight="476.0" prefWidth="338.0" visible="false">
+                     <children>
+                        <Text fx:id="equation_text1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Text>
+                        <Text fx:id="answer_text1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
+                           <font>
+                              <Font size="45.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <GridPane alignment="CENTER" prefHeight="387.0" prefWidth="338.0">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleClearError" prefHeight="73.0" prefWidth="89.0" text="CE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleBackSpace" prefHeight="73.0" prefWidth="89.0" text="⬅" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handlePercent" prefHeight="73.0" prefWidth="89.0" text="\%" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleClear" prefHeight="73.0" prefWidth="89.0" text="C" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleFraction" prefHeight="73.0" prefWidth="89.0" text="1/x" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleRoot" prefHeight="73.0" prefWidth="89.0" text="√x" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleSquare" prefHeight="73.0" prefWidth="89.0" text="x²" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleDivision" prefHeight="73.0" prefWidth="89.0" text="÷" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleSeven" prefHeight="73.0" prefWidth="89.0" text="7" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleEight" prefHeight="73.0" prefWidth="89.0" text="8" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleNine" prefHeight="73.0" prefWidth="89.0" text="9" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleMul" prefHeight="73.0" prefWidth="89.0" text="×" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleFour" prefHeight="73.0" prefWidth="89.0" text="4" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleFive" prefHeight="73.0" prefWidth="89.0" text="5" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleSix" prefHeight="73.0" prefWidth="89.0" text="6" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleMinus" prefHeight="73.0" prefWidth="89.0" text="-" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleOne" prefHeight="73.0" prefWidth="89.0" text="1" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleTwo" prefHeight="73.0" prefWidth="89.0" text="2" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleThree" prefHeight="73.0" prefWidth="89.0" text="3" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleAdd" prefHeight="73.0" prefWidth="89.0" text="+" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleRBracket" prefHeight="73.0" prefWidth="89.0" text=")" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleZero" prefHeight="73.0" prefWidth="89.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleDot" prefHeight="73.0" prefWidth="89.0" text="." GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleEqual" prefHeight="73.0" prefWidth="89.0" text="=" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="73.0" prefWidth="89.0">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handlePower" prefHeight="73.0" prefWidth="89.0" text="x^y" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleSin" prefHeight="73.0" prefWidth="89.0" text="sin" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleCos" prefHeight="73.0" prefWidth="89.0" text="cos" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleTan" prefHeight="73.0" prefWidth="89.0" text="tan" GridPane.columnIndex="4">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="73.0" prefWidth="89.0" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleExp" prefHeight="73.0" prefWidth="89.0" text="Exp" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleTenPow" prefHeight="73.0" prefWidth="89.0" text="10^x" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleFactorial" prefHeight="73.0" prefWidth="89.0" text="n!" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handlePi" prefHeight="73.0" prefWidth="89.0" text="π" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleLBracket" prefHeight="73.0" prefWidth="89.0" text="(" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </VBox>
                </children>
-               <VBox.margin>
-                  <Insets top="5.0" />
-               </VBox.margin>
-            </VBox>
+            </StackPane>
          </children>
       </VBox>
    </children>
