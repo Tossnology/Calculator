@@ -106,7 +106,6 @@ public class Parser {
     public double calculateInOrder(String equation) {
         List<String> suffixList = infix2suffix(equation);
         stack.clear();
-        System.out.println(suffixList);
         for (String s : suffixList) {
             if (s.matches("[0-9]+")) {
                 stack.push(s);
@@ -151,6 +150,12 @@ public class Parser {
         return -1;
     }
 
+    /**
+     * 一元运算
+     * @param a 待计算数
+     * @param type 计算类型
+     * @return 浮点结果
+     */
     public double singleCalculate(String a, String type) {
         switch (type) {
             case "ROOT": {

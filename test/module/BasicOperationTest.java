@@ -11,12 +11,6 @@ import static org.junit.matchers.JUnitMatchers.containsString;
  */
 public class BasicOperationTest {
 
-    /*
-     * Test Strategy:
-     *
-     *
-     */
-
     @Test
     public void getNumberA() {
         OperationAdd add = new OperationAdd();
