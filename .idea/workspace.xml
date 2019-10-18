@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48842814-ab71-4760-9ddb-b3d0eae0c946" name="Default Changelist" comment="">
+    <list default="true" id="3bc21c70-a1b6-4dfe-b879-0d765ff88f9f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/module/OperationCos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationCot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationCsc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationFact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationMod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationPow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationSec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationSin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationTan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/module/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/module/ParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Calculator/module/BasicOperationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Calculator/module/BasicOperationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Calculator/module/SelfOperationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Calculator/module/SelfOperationTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,153 +23,95 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/interfaceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="301" column="52" lean-forward="true" selection-start-line="301" selection-start-column="52" selection-end-line="301" selection-end-column="52" />
+            <state relative-caret-position="3423">
+              <caret line="218" column="23" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1665#1673#0" expanded="true" />
-                <element signature="e#1384#1385#0" expanded="true" />
-                <element signature="e#1441#1442#0" expanded="true" />
-                <element signature="e#1499#1500#0" expanded="true" />
-                <element signature="e#1560#1561#0" expanded="true" />
-                <element signature="e#1616#1617#0" expanded="true" />
-                <element signature="e#1675#1676#0" expanded="true" />
-                <element signature="e#1729#1730#0" expanded="true" />
-                <element signature="e#1787#1788#0" expanded="true" />
                 <element signature="e#2283#2284#0" expanded="true" />
                 <element signature="e#2344#2345#0" expanded="true" />
-                <element signature="e#2448#2449#0" expanded="true" />
-                <element signature="e#2505#2506#0" expanded="true" />
-                <element signature="e#2607#2608#0" expanded="true" />
-                <element signature="e#2666#2667#0" expanded="true" />
-                <element signature="e#2772#2773#0" expanded="true" />
-                <element signature="e#2833#2834#0" expanded="true" />
-                <element signature="e#2780#2781#0" expanded="true" />
-                <element signature="e#2838#2839#0" expanded="true" />
+                <element signature="e#2847#2848#0" expanded="true" />
                 <element signature="e#2905#2906#0" expanded="true" />
+                <element signature="e#2964#2965#0" expanded="true" />
                 <element signature="e#3021#3022#0" expanded="true" />
-                <element signature="e#3274#3275#0" expanded="true" />
-                <element signature="e#3335#3336#0" expanded="true" />
+                <element signature="e#3185#3186#0" expanded="true" />
                 <element signature="e#3242#3243#0" expanded="true" />
+                <element signature="e#3294#3295#0" expanded="true" />
                 <element signature="e#3351#3352#0" expanded="true" />
+                <element signature="e#3402#3403#0" expanded="true" />
                 <element signature="e#3458#3459#0" expanded="true" />
-                <element signature="e#3765#3766#0" expanded="true" />
-                <element signature="e#3823#3824#0" expanded="true" />
+                <element signature="e#3620#3621#0" expanded="true" />
                 <element signature="e#3676#3677#0" expanded="true" />
+                <element signature="e#3727#3728#0" expanded="true" />
                 <element signature="e#3783#3784#0" expanded="true" />
+                <element signature="e#3836#3837#0" expanded="true" />
                 <element signature="e#3894#3895#0" expanded="true" />
-                <element signature="e#4248#4249#0" expanded="true" />
-                <element signature="e#4304#4305#0" expanded="true" />
+                <element signature="e#4162#4163#0" expanded="true" />
                 <element signature="e#4218#4219#0" expanded="true" />
-                <element signature="e#4621#4622#0" expanded="true" />
-                <element signature="e#4679#4680#0" expanded="true" />
-                <element signature="e#12093#12094#0" expanded="true" />
-                <element signature="e#12183#12184#0" expanded="true" />
-                <element signature="e#12299#12300#0" expanded="true" />
-                <element signature="e#12376#12377#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/OperationMul.java">
+        <entry file="file://$PROJECT_DIR$/src/module/OperationCot.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/module/OperationCos.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/module/OperationTan.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/module/OperationSec.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/module/OperationSin.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/module/OperationCsc.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/module/OperationPow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            <state relative-caret-position="231">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/Parser.java">
+        <entry file="file://$PROJECT_DIR$/src/module/OperationFact.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-799">
-              <caret line="118" column="5" lean-forward="true" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#454#462#0" expanded="true" />
-                <element signature="e#512#520#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="252">
+              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/OperationSquare.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/module/OperationMod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding>
-                <element signature="e#112#113#0" expanded="true" />
-                <element signature="e#136#137#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/OperationSub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/module/BasicOperationTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/module/ParserTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/SelfOperation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/module/SelfOperationTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/OperationSqrt.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding>
-                <element signature="e#110#111#0" expanded="true" />
-                <element signature="e#134#135#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="168">
+              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -198,13 +150,18 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/view/interfaceController.java" />
         <option value="$PROJECT_DIR$/test/module/ParserTest.java" />
+        <option value="$PROJECT_DIR$/src/module/OperationCsc.java" />
+        <option value="$PROJECT_DIR$/src/module/OperationPow.java" />
+        <option value="$PROJECT_DIR$/src/module/OperationFact.java" />
+        <option value="$PROJECT_DIR$/src/module/OperationMod.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-12" />
-    <option name="width" value="2212" />
-    <option name="height" value="1546" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="305" />
+    <option name="y" value="-30" />
+    <option name="width" value="1614" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -229,6 +186,11 @@
             <path>
               <item name="Calculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="Calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Calculator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -236,12 +198,6 @@
               <item name="Calculator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calculator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calculator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Calculator" type="b2602c69:ProjectViewProjectNode" />
@@ -272,7 +228,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/module" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -286,6 +242,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\QQ\462272701\FileRecv\calculator\Calculator\src\module" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -377,55 +336,49 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61642000" />
+    <option name="totallyTimeSpent" value="63922000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1106" height="773" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29389313" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25603217" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32866043" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32866043" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.50040483" side_tool="true" weight="0.32866043" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Messages" weight="0.32866043" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32866043" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49959514" visible="true" weight="0.32866043" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49959514" weight="0.32866043" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32866043" />
+      <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32866043" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50040483" side_tool="true" weight="0.32866043" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="11" visible="true" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32866043" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/IdeaProjects/Calculator/src/view/interface.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2681">
-          <caret line="14" column="38" selection-end-line="198" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
+    <entry file="file://D:/IdeaProjects/Calculator/src/view/interface.fxml" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -436,20 +389,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_221/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="1768" column="31" selection-start-line="1768" selection-start-column="31" selection-end-line="1768" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_221/javafx-src.zip!/com/sun/javafx/event/CompositeEventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_221/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_221/javafx-src.zip!/com/sun/javafx/event/CompositeEventHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/module/OperationAdd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -459,15 +400,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/module/BasicOperation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state relative-caret-position="210">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/module/OperationDiv.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        <state relative-caret-position="273">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -499,8 +440,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -524,12 +465,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/module/OperationSquare.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#112#113#0" expanded="true" />
-            <element signature="e#136#137#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="147">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -542,22 +479,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/module/BasicOperationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        <state relative-caret-position="2289">
+          <caret line="113" column="1" selection-start-line="113" selection-start-column="1" selection-end-line="113" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/module/SelfOperationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        <state relative-caret-position="63">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/module/ParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="567">
+          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -570,63 +507,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/module/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-799">
-          <caret line="118" column="5" lean-forward="true" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
+        <state relative-caret-position="2730">
+          <caret line="132" column="36" selection-start-line="132" selection-start-column="36" selection-end-line="132" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#454#462#0" expanded="true" />
-            <element signature="e#512#520#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/interfaceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="301" column="52" lean-forward="true" selection-start-line="301" selection-start-column="52" selection-end-line="301" selection-end-column="52" />
+        <state relative-caret-position="3423">
+          <caret line="218" column="23" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1665#1673#0" expanded="true" />
-            <element signature="e#1384#1385#0" expanded="true" />
-            <element signature="e#1441#1442#0" expanded="true" />
-            <element signature="e#1499#1500#0" expanded="true" />
-            <element signature="e#1560#1561#0" expanded="true" />
-            <element signature="e#1616#1617#0" expanded="true" />
-            <element signature="e#1675#1676#0" expanded="true" />
-            <element signature="e#1729#1730#0" expanded="true" />
-            <element signature="e#1787#1788#0" expanded="true" />
             <element signature="e#2283#2284#0" expanded="true" />
             <element signature="e#2344#2345#0" expanded="true" />
-            <element signature="e#2448#2449#0" expanded="true" />
-            <element signature="e#2505#2506#0" expanded="true" />
-            <element signature="e#2607#2608#0" expanded="true" />
-            <element signature="e#2666#2667#0" expanded="true" />
-            <element signature="e#2772#2773#0" expanded="true" />
-            <element signature="e#2833#2834#0" expanded="true" />
-            <element signature="e#2780#2781#0" expanded="true" />
-            <element signature="e#2838#2839#0" expanded="true" />
+            <element signature="e#2847#2848#0" expanded="true" />
             <element signature="e#2905#2906#0" expanded="true" />
+            <element signature="e#2964#2965#0" expanded="true" />
             <element signature="e#3021#3022#0" expanded="true" />
-            <element signature="e#3274#3275#0" expanded="true" />
-            <element signature="e#3335#3336#0" expanded="true" />
+            <element signature="e#3185#3186#0" expanded="true" />
             <element signature="e#3242#3243#0" expanded="true" />
+            <element signature="e#3294#3295#0" expanded="true" />
             <element signature="e#3351#3352#0" expanded="true" />
+            <element signature="e#3402#3403#0" expanded="true" />
             <element signature="e#3458#3459#0" expanded="true" />
-            <element signature="e#3765#3766#0" expanded="true" />
-            <element signature="e#3823#3824#0" expanded="true" />
+            <element signature="e#3620#3621#0" expanded="true" />
             <element signature="e#3676#3677#0" expanded="true" />
+            <element signature="e#3727#3728#0" expanded="true" />
             <element signature="e#3783#3784#0" expanded="true" />
+            <element signature="e#3836#3837#0" expanded="true" />
             <element signature="e#3894#3895#0" expanded="true" />
-            <element signature="e#4248#4249#0" expanded="true" />
-            <element signature="e#4304#4305#0" expanded="true" />
+            <element signature="e#4162#4163#0" expanded="true" />
             <element signature="e#4218#4219#0" expanded="true" />
-            <element signature="e#4621#4622#0" expanded="true" />
-            <element signature="e#4679#4680#0" expanded="true" />
-            <element signature="e#12093#12094#0" expanded="true" />
-            <element signature="e#12183#12184#0" expanded="true" />
-            <element signature="e#12299#12300#0" expanded="true" />
-            <element signature="e#12376#12377#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/OperationSq.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/OperationCot.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/OperationCos.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/OperationTan.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/OperationSec.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/OperationSin.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/OperationCsc.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/OperationPow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/OperationFact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/OperationMod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
