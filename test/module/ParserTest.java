@@ -40,11 +40,18 @@ public class ParserTest {
 
     @Test
     public void binaryCalculate() {
-
+        Parser p = new Parser();
+        assertEquals(1.5, p.binaryCalculate("1","0.5",ButtonMapper.ADD_BTN), 0);
+        assertEquals(0.5, p.binaryCalculate("1","0.5",ButtonMapper.MINUS_BTN), 0);
+        assertEquals(0.5, p.binaryCalculate("1","0.5",ButtonMapper.MULTIPLY_BTN), 0);
+        assertEquals(2.0, p.binaryCalculate("1","0.5",ButtonMapper.DIVISION_BTN), 0);
     }
 
     @Test
     public void singleCalculate() {
-
+        Parser p = new Parser();
+        assertEquals(3.0, p.singleCalculate("9", ButtonMapper.ROOT_BTN), 0);
+        assertEquals(9, p.singleCalculate("3", ButtonMapper.SQUARE_BTN), 0);
+        assertEquals(0.125, p.singleCalculate("8", ButtonMapper.FRACTION_BTN), 0);
     }
 }
