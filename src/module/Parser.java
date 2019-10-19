@@ -182,13 +182,13 @@ public class Parser {
         return -1;
     }
 
-    private double binaryCal(double a, double b, BasicOperation op) {
+    public double binaryCal(double a, double b, BasicOperation op) {
         op.setNumberA(a);
         op.setNumberB(b);
         return op.getResult();
     }
 
-    private double singleCal(double a, SelfOperation op) {
+    public double singleCal(double a, SelfOperation op) {
         op.setNumber(a);
         return op.getResult();
     }

@@ -404,14 +404,11 @@
                   </TextArea>
                   <VBox fx:id="conversionpane" prefHeight="476.0" prefWidth="338.0">
                      <children>
-                        <TextField fx:id="conversion_text" prefHeight="58.0" prefWidth="338.0">
+                        <Text fx:id="conversion_text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="338.0">
                            <font>
-                              <Font size="29.0" />
+                              <Font size="36.0" />
                            </font>
-                           <VBox.margin>
-                              <Insets bottom="10.0" />
-                           </VBox.margin>
-                        </TextField>
+                        </Text>
                         <ChoiceBox fx:id="unit1" prefHeight="29.0" prefWidth="85.0">
                            <VBox.margin>
                               <Insets bottom="10.0" />
@@ -419,7 +416,7 @@
                         </ChoiceBox>
                         <Text fx:id="result_text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.240234375">
                            <font>
-                              <Font size="29.0" />
+                              <Font size="36.0" />
                            </font>
                            <VBox.margin>
                               <Insets bottom="10.0" />

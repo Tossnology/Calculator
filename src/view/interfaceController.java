@@ -1,5 +1,8 @@
 package view;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
@@ -10,10 +13,12 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.event.ActionEvent;
-import module.ButtonMapper;
-import module.Parser;
+import module.*;
 
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -41,7 +46,7 @@ public class interfaceController {
     private Text equation_text2;
 
     @FXML
-    private TextField conversion_text;
+    private Text conversion_text;
 
     @FXML
     private Text result_text;
@@ -62,15 +67,31 @@ public class interfaceController {
     private boolean calculated = false; // 记录在键入下一个字符前，是否刚刚经过了计算
     private Parser parser = new Parser(); // 解析器
     private List<String> equationList = new ArrayList<String>(); //保存当前在计算器输入的计算式内容
+    private List<String> history = new ArrayList<String>();
+    private List<String> conversionlist = Arrays.asList("毫米","厘米","米","千米");
+    private int con1 = 1;
+    private int con2 = 2;
 
     private Text getCurrentEquationText() {
-        return rootpane.isVisible()? equation_text1 : equation_text2;
+       if (rootpane.isVisible()) {
+           return equation_text1;
+       } else if (rootpane1.isVisible()) {
+           return equation_text2;
+       } else if (conversionpane.isVisible()) {
+           return equation_text1;
+       }
+       return null;
     }
 
-    private List<String> history = new ArrayList<String>();
-
     private Text getCurrentAnswerText() {
-        return rootpane.isVisible()? answer_text1 : answer_text2;
+        if (rootpane.isVisible()) {
+            return answer_text1;
+        } else if (rootpane1.isVisible()) {
+            return answer_text2;
+        } else if (conversionpane.isVisible()) {
+            return conversion_text;
+        }
+        return null;
     }
 
     @FXML
@@ -274,6 +295,20 @@ public class interfaceController {
         rootpane1.setVisible(false);
         hispane.setVisible(true);
         conversionpane.setVisible(false);
+
+        //显示历史记录
+        for (String s : history) {
+            hispane.appendText(s);
+        }
+    }
+
+    private void updateConversionType(int i, int a) {
+        if (a == 0) {
+            con1 = i;
+        } else {
+            con2 = i;
+        }
+        updateConversion();
     }
 
     @FXML
@@ -434,7 +469,84 @@ public class interfaceController {
                 }
             }
         });
+        conversionpane.setOnKeyTyped(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+                if (event.getCharacter().equals("1")) {
+                    handleOne(new ActionEvent());
+                }
+                if (event.getCharacter().equals("2")) {
+                    handleTwo(new ActionEvent());
+                }
+                if (event.getCharacter().equals("3")) {
+                    handleThree(new ActionEvent());
+                }
+                if (event.getCharacter().equals("4")) {
+                    handleFour(new ActionEvent());
+                }
+                if (event.getCharacter().equals("5")) {
+                    handleFive(new ActionEvent());
+                }
+                if (event.getCharacter().equals("6")) {
+                    handleSix(new ActionEvent());
+                }
+                if (event.getCharacter().equals("7")) {
+                    handleSeven(new ActionEvent());
+                }
+                if (event.getCharacter().equals("8")) {
+                    handleEight(new ActionEvent());
+                }
+                if (event.getCharacter().equals("9")) {
+                    handleNine(new ActionEvent());
+                }
+                if (event.getCharacter().equals("0")) {
+                    handleZero(new ActionEvent());
+                }
+                if (event.getCharacter().equals("=")) {
+                    handleEqual(new ActionEvent());
+                }
+                if (event.getCharacter().equals(".") || event.getCharacter().equals("。")) {
+                    handleDot(new ActionEvent());
+                }
+            }
+        });
+        conversionpane.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+                if (event.getCode() == KeyCode.BACK_SPACE) {
+                    handleBackSpace(new ActionEvent());
+                }
+                if (event.getCode() == KeyCode.ENTER) {
+                    handleEqual(new ActionEvent());
+                }
+                if (event.getCode() == KeyCode.SPACE) {
+                    handleEqual(new ActionEvent());
+                }
+                if (event.getCode() == KeyCode.ESCAPE) {
+                    handleClear(new ActionEvent());
+                }
+            }
+        });
         handleStandard(new ActionEvent());
+        unit1.setItems(FXCollections.observableArrayList("毫米","厘米","米","千米"));
+        unit1.setValue("厘米");
+        unit1.getSelectionModel().selectedIndexProperty()
+                .addListener((ObservableValue<? extends Number> ov, Number oldVal, Number newVal) -> {
+                    updateConversionType(newVal.intValue(), 0);
+                });
+        unit2.setItems(FXCollections.observableArrayList("毫米","厘米","米","千米"));
+        unit2.setValue("米");
+        unit2.getSelectionModel().selectedIndexProperty()
+                .addListener((ObservableValue<? extends Number> ov, Number oldVal, Number newVal) -> {
+                    updateConversionType(newVal.intValue(), 1);
+                });
+
+        conversion_text.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                updateConversion();
+            }
+        });
     }
 
     /**
@@ -446,7 +558,6 @@ public class interfaceController {
         //处理数字相关内容
         //处理pi
         if (etext.matches("([0-9]+)|(π)")) {
-
             if (answerText.getText().equals("0")) {
                 answerText.setText("");
             }
@@ -584,29 +695,41 @@ public class interfaceController {
             //输入的回车键或者 =
             if (etext.equals(ButtonMapper.EQUAL_BTN)) {
                 //ans = parser.calculateInOrder(equation_text1.getText() + answer_text1.getText());
+                String equ = "";
                 if (getCurrentEquationText().equals(equation_text1)) {
+
                     String lastOp = getEqautionLastOperation(equationText.getText());
                     if (lastOp != null) {
+                        equ = String.valueOf(ans) + lastOp + answerText.getText();
                         ans = parser.binaryCalculate(String.valueOf(ans), answerText.getText(), lastOp);
                     } else {
+                        equ = answerText.getText();
                         ans = Double.valueOf(answerText.getText());
                     }
                     calculated = true;
                     clearEquationText();
                     setAnswerText(String.valueOf(ans));
+
+                    //添加历史记录
+                    history.add(equ + " = " + String.valueOf(ans) + "\n");
                 }
                 if (getCurrentEquationText().equals(equation_text2)) {
                     System.out.println(equationText.getText());
                     if (!equationText.getText().isEmpty()) {
                         if (!getEqautionLastOperation(getCurrentEquationText().getText()).equals(")")) {
+                            equ = equationText.getText() + answerText.getText();
                             ans = parser.calculateInOrder(equationText.getText() + answerText.getText());
                         } else {
+                            equ = equationText.getText();
                             ans = parser.calculateInOrder(equationText.getText());
                         }
                     }
                     calculated = true;
                     clearEquationText();
                     setAnswerText(String.valueOf(ans));
+
+                    //添加历史记录
+                    history.add(equ + " = " + String.valueOf(ans) + "\n");
                 }
             }
             // C键/CE键
@@ -655,6 +778,81 @@ public class interfaceController {
             }
         }
         return null;
+    }
+
+    private void updateConversion() {
+        if (!conversion_text.getText().matches("[0-9]+.?[0-9]*")) {
+            return;
+        }
+        result_text.setText(String.valueOf(getConversionResult()));
+    }
+
+    private double getConversionResult() {
+        if (con1 == 0) {
+            switch (con2) {
+                case 0: {
+                    return Double.parseDouble(conversion_text.getText());
+                }
+                case 1: {
+                    return parser.singleCal(Double.parseDouble(conversion_text.getText()), new OperationMM2CM());
+                }
+                case 2: {
+                    return parser.singleCal(Double.parseDouble(conversion_text.getText()), new OperationMM2M());
+                }
+                case 3: {
+                    return parser.singleCal(Double.parseDouble(conversion_text.getText()), new OperationMM2KM());
+                }
+            }
+        }
+        if (con1 == 1) {
+            switch (con2) {
+                case 0: {
+                    return parser.singleCal(Double.parseDouble(conversion_text.getText()), new OperationCM2MM());
+                }
+                case 1: {
+                    return Double.parseDouble(conversion_text.getText());
+                }
+                case 2: {
+                    return parser.singleCal(Double.parseDouble(conversion_text.getText()), new OperationCM2M());
+                }
+                case 3: {
+                    return parser.singleCal(Double.parseDouble(conversion_text.getText()), new OperationCM2KM());
+                }
+            }
+        }
+        if (con1 == 2) {
+            switch (con2) {
+                case 0: {
+                    return parser.singleCal(Double.parseDouble(conversion_text.getText()), new OperationM2MM());
+                }
+                case 1: {
+                    return parser.singleCal(Double.parseDouble(conversion_text.getText()), new OperationM2CM());
+                }
+                case 2: {
+                    return Double.parseDouble(conversion_text.getText());
+                }
+                case 3: {
+                    return parser.singleCal(Double.parseDouble(conversion_text.getText()), new OperationM2KM());
+                }
+            }
+        }
+        if (con1 == 3) {
+            switch (con2) {
+                case 0: {
+                    return parser.singleCal(Double.parseDouble(conversion_text.getText()), new OperationKM2MM());
+                }
+                case 1: {
+                    return parser.singleCal(Double.parseDouble(conversion_text.getText()), new OperationKM2CM());
+                }
+                case 2: {
+                    return parser.singleCal(Double.parseDouble(conversion_text.getText()), new OperationKM2M());
+                }
+                case 3: {
+                    return Double.parseDouble(conversion_text.getText());
+                }
+            }
+        }
+        return -1;
     }
 
 }
