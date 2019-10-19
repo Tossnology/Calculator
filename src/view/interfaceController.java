@@ -2,6 +2,9 @@ package view;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
@@ -10,7 +13,6 @@ import javafx.event.ActionEvent;
 import module.ButtonMapper;
 import module.Parser;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +40,24 @@ public class interfaceController {
     @FXML
     private Text equation_text2;
 
+    @FXML
+    private TextField conversion_text;
+
+    @FXML
+    private Text result_text;
+
+    @FXML
+    private TextArea hispane;
+
+    @FXML
+    private VBox conversionpane;
+
+    @FXML
+    private ChoiceBox<String> unit1; //下拉列表1
+
+    @FXML
+    private ChoiceBox<String> unit2; //下拉列表2
+
     private double ans = 0; // 答案值，保存临时计算结果
     private boolean calculated = false; // 记录在键入下一个字符前，是否刚刚经过了计算
     private Parser parser = new Parser(); // 解析器
@@ -46,6 +66,8 @@ public class interfaceController {
     private Text getCurrentEquationText() {
         return rootpane.isVisible()? equation_text1 : equation_text2;
     }
+
+    private List<String> history = new ArrayList<String>();
 
     private Text getCurrentAnswerText() {
         return rootpane.isVisible()? answer_text1 : answer_text2;
@@ -226,17 +248,32 @@ public class interfaceController {
     void handleStandard(ActionEvent event) {
         rootpane.setVisible(true);
         rootpane1.setVisible(false);
+        hispane.setVisible(false);
+        conversionpane.setVisible(false);
     }
 
     @FXML
     void handleScience(ActionEvent event) {
         rootpane.setVisible(false);
         rootpane1.setVisible(true);
+        hispane.setVisible(false);
+        conversionpane.setVisible(false);
+    }
+
+    @FXML
+    void handleConversion(ActionEvent event) {
+        rootpane.setVisible(false);
+        rootpane1.setVisible(false);
+        hispane.setVisible(false);
+        conversionpane.setVisible(true);
     }
 
     @FXML
     void handleHistory(ActionEvent event) {
-
+        rootpane.setVisible(false);
+        rootpane1.setVisible(false);
+        hispane.setVisible(true);
+        conversionpane.setVisible(false);
     }
 
     @FXML
@@ -246,6 +283,7 @@ public class interfaceController {
         answer_text1.setText("0");
         equation_text2.setText("");
         answer_text2.setText("0");
+        conversion_text.setText("0");
         // 注册键盘事件
         rootpane.setOnKeyTyped(new EventHandler<KeyEvent>() {
             @Override
@@ -396,7 +434,7 @@ public class interfaceController {
                 }
             }
         });
-        rootpane1.setVisible(false);
+        handleStandard(new ActionEvent());
     }
 
     /**

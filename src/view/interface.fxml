@@ -16,14 +16,15 @@
                   <items>
                     <MenuItem mnemonicParsing="false" onAction="#handleStandard" text="标准" />
                         <MenuItem mnemonicParsing="false" onAction="#handleScience" text="科学" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleConversion" text="转换" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleHistory" text="历史" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" onAction="#handleHistory" />
               </menus>
             </MenuBar>
             <StackPane prefHeight="480.0" prefWidth="338.0">
                <children>
-                  <VBox fx:id="rootpane" prefHeight="476.0" prefWidth="338.0">
+                  <VBox fx:id="rootpane" prefHeight="476.0" prefWidth="338.0" visible="false">
                      <children>
                         <Text fx:id="equation_text1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
                            <font>
@@ -393,6 +394,130 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <TextArea fx:id="hispane" prefHeight="200.0" prefWidth="200.0" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextArea>
+                  <VBox fx:id="conversionpane" prefHeight="476.0" prefWidth="338.0">
+                     <children>
+                        <TextField fx:id="conversion_text" prefHeight="58.0" prefWidth="338.0">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <ChoiceBox fx:id="unit1" prefHeight="29.0" prefWidth="85.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <Text fx:id="result_text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.240234375">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <ChoiceBox fx:id="unit2" prefHeight="29.0" prefWidth="84.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <GridPane alignment="CENTER" prefHeight="213.0" prefWidth="338.0">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleClearError" prefHeight="32.0" prefWidth="113.0" text="CE" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleBackSpace" prefHeight="67.0" prefWidth="124.0" text="⬅" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleSeven" prefHeight="42.0" prefWidth="138.0" text="7" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleEight" prefHeight="42.0" prefWidth="134.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleNine" prefHeight="69.0" prefWidth="123.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleFour" prefHeight="42.0" prefWidth="141.0" text="4" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleFive" prefHeight="42.0" prefWidth="142.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleSix" prefHeight="42.0" prefWidth="134.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleOne" prefHeight="42.0" prefWidth="139.0" text="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleTwo" prefHeight="42.0" prefWidth="142.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleThree" prefHeight="42.0" prefWidth="151.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="42.0" prefWidth="160.0" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleZero" prefHeight="42.0" prefWidth="143.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleDot" prefHeight="42.0" prefWidth="163.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <VBox.margin>
+                              <Insets top="80.0" />
+                           </VBox.margin>
                         </GridPane>
                      </children>
                   </VBox>
