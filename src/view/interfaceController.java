@@ -780,6 +780,7 @@ public class interfaceController {
         return null;
     }
 
+    //刷新单位转换
     private void updateConversion() {
         if (!conversion_text.getText().matches("[0-9]+.?[0-9]*")) {
             return;
@@ -787,6 +788,7 @@ public class interfaceController {
         result_text.setText(String.valueOf(getConversionResult()));
     }
 
+    //获得转换结果
     private double getConversionResult() {
         if (con1 == 0) {
             switch (con2) {

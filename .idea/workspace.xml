@@ -2,18 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab65c9c1-7f74-4461-be69-714472bbb7b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/module/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/module/Parser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/view/interface.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/view/interface.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/view/interfaceController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/view/interfaceController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/view/interfaceController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/view/interfaceController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/view/interfaceController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/view/interfaceController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/view/interfaceController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/view/interfaceController$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/view/interfaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/view/interfaceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/interface.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/interface.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/interfaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/interfaceController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,41 +16,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/module/BasicOperationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-391">
+              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/interfaceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="724" column="25" lean-forward="true" selection-start-line="724" selection-start-column="25" selection-end-line="724" selection-end-column="25" />
+            <state relative-caret-position="174">
+              <caret line="708" column="33" selection-start-line="708" selection-start-column="33" selection-end-line="708" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1429#1437#0" expanded="true" />
-                <element signature="e#24043#24044#0" expanded="true" />
-                <element signature="e#24098#24099#0" expanded="true" />
-                <element signature="e#24146#24147#0" expanded="true" />
-                <element signature="e#24199#24200#0" expanded="true" />
-                <element signature="e#24274#24275#0" expanded="true" />
-                <element signature="e#24326#24327#0" expanded="true" />
-                <element signature="e#24364#24365#0" expanded="true" />
-                <element signature="e#24414#24415#0" expanded="true" />
+                <element signature="e#1471#1479#0" expanded="true" />
+                <element signature="e#1550#1558#0" expanded="true" />
+                <element signature="e#27617#27618#0" expanded="true" />
+                <element signature="e#27672#27673#0" expanded="true" />
+                <element signature="e#27720#27721#0" expanded="true" />
+                <element signature="e#27773#27774#0" expanded="true" />
+                <element signature="e#27848#27849#0" expanded="true" />
+                <element signature="e#27900#27901#0" expanded="true" />
+                <element signature="e#27938#27939#0" expanded="true" />
+                <element signature="e#27988#27989#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/OperationMM2M.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/OperationCM2KM.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -71,25 +51,7 @@
         <entry file="file://$PROJECT_DIR$/src/module/SelfOperation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/OperationTan.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -97,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/module/ButtonMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+            <state relative-caret-position="-33">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -106,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/interface.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="369" column="144" selection-start-line="369" selection-start-column="144" selection-end-line="369" selection-end-column="144" />
+            <state relative-caret-position="212">
+              <caret line="200" column="33" selection-start-line="200" selection-start-column="33" selection-end-line="200" selection-end-column="33" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -116,8 +78,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/module/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3094">
-              <caret line="182" column="5" selection-start-line="182" selection-start-column="5" selection-end-line="182" selection-end-column="5" />
+            <state relative-caret-position="-1495">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#449#457#0" expanded="true" />
+                <element signature="e#508#516#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/module/ParserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,10 +102,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/OperationSin.java">
+        <entry file="file://$PROJECT_DIR$/test/module/SelfOperationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="595">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/gradle.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/module/OperationCM2MM.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -298,7 +288,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ParserTest.compareOperation">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Calculator" />
@@ -339,8 +329,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ParserTest.compareOperation" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ParserTest" />
       </list>
     </recent_temporary>
@@ -361,9 +351,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ParserTest - 2019.10.16 at 22h 31m 30s.xml">
-      <configuration name="ParserTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ParserTest - 2019.10.16 at 22h 33m 30s.xml">
       <configuration name="ParserTest" configurationId="JUnit" />
     </history-entry>
@@ -391,29 +378,31 @@
     <history-entry file="ParserTest_compareOperation - 2019.10.19 at 11h 12m 42s.xml">
       <configuration name="ParserTest.compareOperation" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ParserTest_compareOperation - 2019.10.19 at 22h 50m 55s.xml">
+      <configuration name="ParserTest.compareOperation" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93185000" />
+    <option name="totallyTimeSpent" value="94475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2534413" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.641129" visible="true" weight="0.2534413" />
+      <window_info id="Structure" order="1" sideWeight="0.35887095" side_tool="true" weight="0.2534413" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Statistic" weight="0.32866043" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32866043" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49959514" visible="true" weight="0.28504673" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49959514" weight="0.28504673" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32866043" />
       <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32866043" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50040483" side_tool="true" weight="0.32866043" />
@@ -421,6 +410,7 @@
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32866043" />
+      <window_info anchor="bottom" id="Statistic" order="14" weight="0.32866043" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -458,8 +448,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/module/BasicOperation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state relative-caret-position="85">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -504,24 +494,10 @@
     <entry file="file://$PROJECT_DIR$/src/module/OperationSec.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/module/BasicOperationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/module/OperationDiv.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/module/SelfOperationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -532,20 +508,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/module/OperationCsc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/module/OperationSq.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/OperationCsc.java" />
+    <entry file="file://$PROJECT_DIR$/src/module/OperationSq.java" />
     <entry file="file://$PROJECT_DIR$/src/module/OperationMod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -567,16 +531,6 @@
           <folding>
             <element signature="e#110#111#0" expanded="true" />
             <element signature="e#155#156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/module/ParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -604,8 +558,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/interface.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="369" column="144" selection-start-line="369" selection-start-column="144" selection-end-line="369" selection-end-column="144" />
+        <state relative-caret-position="212">
+          <caret line="200" column="33" selection-start-line="200" selection-start-column="33" selection-end-line="200" selection-end-column="33" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -620,14 +574,14 @@
     <entry file="file://$PROJECT_DIR$/src/module/SelfOperation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="6" />
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/module/ButtonMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        <state relative-caret-position="-33">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -638,31 +592,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/module/BasicOperationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-391">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/module/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3094">
-          <caret line="182" column="5" selection-start-line="182" selection-start-column="5" selection-end-line="182" selection-end-column="5" />
+        <state relative-caret-position="-1495">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#449#457#0" expanded="true" />
+            <element signature="e#508#516#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/module/ParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/module/SelfOperationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/gradle.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/OperationCM2MM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/interfaceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="724" column="25" lean-forward="true" selection-start-line="724" selection-start-column="25" selection-end-line="724" selection-end-column="25" />
+        <state relative-caret-position="174">
+          <caret line="708" column="33" selection-start-line="708" selection-start-column="33" selection-end-line="708" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1429#1437#0" expanded="true" />
-            <element signature="e#24043#24044#0" expanded="true" />
-            <element signature="e#24098#24099#0" expanded="true" />
-            <element signature="e#24146#24147#0" expanded="true" />
-            <element signature="e#24199#24200#0" expanded="true" />
-            <element signature="e#24274#24275#0" expanded="true" />
-            <element signature="e#24326#24327#0" expanded="true" />
-            <element signature="e#24364#24365#0" expanded="true" />
-            <element signature="e#24414#24415#0" expanded="true" />
+            <element signature="e#1471#1479#0" expanded="true" />
+            <element signature="e#1550#1558#0" expanded="true" />
+            <element signature="e#27617#27618#0" expanded="true" />
+            <element signature="e#27672#27673#0" expanded="true" />
+            <element signature="e#27720#27721#0" expanded="true" />
+            <element signature="e#27773#27774#0" expanded="true" />
+            <element signature="e#27848#27849#0" expanded="true" />
+            <element signature="e#27900#27901#0" expanded="true" />
+            <element signature="e#27938#27939#0" expanded="true" />
+            <element signature="e#27988#27989#0" expanded="true" />
           </folding>
         </state>
       </provider>
