@@ -437,6 +437,7 @@ public class interfaceController {
                     if (lastOp.equals(")")) {
                         System.out.println(equationText.getText() + etext);
                         equationText.setText(equationText.getText() + etext);
+                        answerText.setText("0");
                         return;
                     } else if (lastOp.equals("(")) {
                         equationText.setText(equationText.getText() + answerText.getText() + etext);
@@ -467,14 +468,20 @@ public class interfaceController {
         if (etext.matches("[\\)\\(]")) {
             if (etext.equals(ButtonMapper.LBRACKET_BTN)) {
                 equationText.setText(equationText.getText() + "(");
-
+                answerText.setText("0");
             }
             if (etext.equals(ButtonMapper.RBRACKET_BTN) && equationText.getText().contains("(")) {
-                //检查答案栏中是否有新输入的数字
-                if (!calculated && !answerText.getText().isEmpty()) {
+                //如果最近一个计算符是括号，则不添加答案栏中内容
+                if (!calculated && getEqautionLastOperation(equationText.getText()).equals(")")) {
+
+                }
+                //检查答案栏中是否有新输入的数字，有就添加到公式栏
+                else if (!calculated && !answerText.getText().isEmpty()) {
                     equationText.setText(equationText.getText() + answerText.getText());
+
                 }
                 equationText.setText(equationText.getText() + ")");
+                answerText.setText("0");
                 calculated = false;
             }
         }
@@ -539,7 +546,11 @@ public class interfaceController {
                 }
                 if (getCurrentEquationText().equals(equation_text2)) {
                     System.out.println(equationText.getText());
-                    ans = parser.calculateInOrder(equationText.getText());
+                    if (!getEqautionLastOperation(getCurrentEquationText().getText()).equals(")")) {
+                        ans = parser.calculateInOrder(equationText.getText() + answerText.getText());
+                    } else {
+                        ans = parser.calculateInOrder(equationText.getText());
+                    }
                     calculated = true;
                     clearEquationText();
                     setAnswerText(String.valueOf(ans));
