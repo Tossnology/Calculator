@@ -14,18 +14,18 @@
               <menus>
                 <Menu mnemonicParsing="false" text="菜单">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="标准" />
-                        <MenuItem mnemonicParsing="false" text="科学" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleStandard" text="标准" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleScience" text="科学" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="历史" />
+                <Menu mnemonicParsing="false" onAction="#handleHistory" text="历史" />
               </menus>
             </MenuBar>
             <StackPane prefHeight="480.0" prefWidth="338.0">
                <children>
                   <VBox fx:id="rootpane" prefHeight="476.0" prefWidth="338.0">
                      <children>
-                        <Text fx:id="equation_text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
+                        <Text fx:id="equation_text1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
                            <font>
                               <Font size="19.0" />
                            </font>
@@ -33,7 +33,7 @@
                               <Insets />
                            </VBox.margin>
                         </Text>
-                        <Text fx:id="answer_text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
+                        <Text fx:id="answer_text1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
                            <font>
                               <Font size="45.0" />
                            </font>
@@ -183,7 +183,7 @@
                   </VBox>
                   <VBox fx:id="rootpane1" prefHeight="476.0" prefWidth="338.0" visible="false">
                      <children>
-                        <Text fx:id="equation_text1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
+                        <Text fx:id="equation_text2" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
                            <font>
                               <Font size="19.0" />
                            </font>
@@ -191,7 +191,7 @@
                               <Insets />
                            </VBox.margin>
                         </Text>
-                        <Text fx:id="answer_text1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
+                        <Text fx:id="answer_text2" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.48046875">
                            <font>
                               <Font size="45.0" />
                            </font>

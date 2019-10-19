@@ -41,7 +41,8 @@ public class Parser {
                 infixList.add(equation.charAt(i) + "");
                 continue;
             }
-            if (equation.charAt(i) >= '0' && equation.charAt(i) <= '9') {
+            if ((equation.charAt(i) >= '0' && equation.charAt(i) <= '9')
+                    || equation.charAt(i) == '.') {
                 if (!digit) {
                     sb.append(equation.charAt(i));
                     digit = true;
