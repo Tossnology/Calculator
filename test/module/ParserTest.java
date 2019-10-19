@@ -36,6 +36,9 @@ public class ParserTest {
         assertEquals(0, p.compareOperation('×','×'));
         assertEquals(-1, p.compareOperation('+','×'));
         assertEquals(0, p.compareOperation('+','+'));
+        assertEquals(1, p.compareOperation('^','+'));
+        assertEquals(0, p.compareOperation('^','×'));
+        assertEquals(-1, p.compareOperation('+','^'));
     }
 
     @Test

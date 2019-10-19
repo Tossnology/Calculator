@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import module.ButtonMapper;
 import module.Parser;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -294,12 +295,6 @@ public class interfaceController {
                 if (event.getCharacter().equals("=")) {
                     handleEqual(new ActionEvent());
                 }
-                if (event.getCharacter().equals("(") || event.getCharacter().equals("（")) {
-                    handleLBracket(new ActionEvent());
-                }
-                if (event.getCharacter().equals(")") || event.getCharacter().equals("）")) {
-                    handleRBracket(new ActionEvent());
-                }
                 if (event.getCharacter().equals(".") || event.getCharacter().equals("。")) {
                     handleDot(new ActionEvent());
                 }
@@ -370,6 +365,9 @@ public class interfaceController {
                 if (event.getCharacter().equals("=")) {
                     handleEqual(new ActionEvent());
                 }
+                if (event.getCharacter().equals("^") || event.getCharacter().equals("…")) {
+                    handlePower(new ActionEvent());
+                }
                 if (event.getCharacter().equals("(") || event.getCharacter().equals("（")) {
                     handleLBracket(new ActionEvent());
                 }
@@ -408,27 +406,33 @@ public class interfaceController {
      */
     private void updateEquationText(String etext, Text answerText, Text equationText) {
         //处理数字相关内容
-        if (etext.matches("[0-9]+")) {
+        //处理pi
+        if (etext.matches("([0-9]+)|(π)")) {
+
             if (answerText.getText().equals("0")) {
                 answerText.setText("");
             }
-            // case1: answer text has number, not yet calculateInOrder, then append number
-            if (!calculated) {
+            //case0: PI
+            if (etext.matches("π")) {
+                clearAnswerText();
+                answerText.setText("3.1415926535897932384626433832795");
+            }
+            else if (!calculated) {
+                // case1: answer text has number, not yet calculateInOrder, then append number
                 answerText.setText(answerText.getText() + etext);
             }
-            // case2: answer text has number, has been calculateInOrder, then clear answer text and fill number
-            if (calculated) {
-                answerText.setText(etext);
-            }
-            // case3: answer text has no number
-            if (answerText.getText().isEmpty()) {
+            else if (calculated || answerText.getText().isEmpty()) {
+                // case2: answer text has number, has been calculate or has number
+                System.out.println("pai");
                 answerText.setText(etext);
             }
             calculated = false;
         }
         //处理运算符相关内容（不含括号）
-        if (etext.matches("[\\+\\-×÷]")) {
+        //包含处理幂函数
+        if (etext.matches("[+\\-×÷^]")) {
             //case1: 在输入运算符之前没有发生计算，则连接答案栏和算式栏的式子，形式为 <算式栏><答案栏><运算符>
+            System.out.println(etext);
             if (!calculated) {
                 //ans = parser.calculateInOrder(equation_text1.getText() + answer_text1.getText());  //计算
                 String lastOp = getEqautionLastOperation(equationText.getText());
@@ -470,37 +474,46 @@ public class interfaceController {
                 equationText.setText(equationText.getText() + "(");
                 answerText.setText("0");
             }
+            //添加右括号
             if (etext.equals(ButtonMapper.RBRACKET_BTN) && equationText.getText().contains("(")) {
                 //如果最近一个计算符是括号，则不添加答案栏中内容
                 if (!calculated && getEqautionLastOperation(equationText.getText()).equals(")")) {
-
+                    equationText.setText(equationText.getText() + ")");
                 }
                 //检查答案栏中是否有新输入的数字，有就添加到公式栏
                 else if (!calculated && !answerText.getText().isEmpty()) {
                     equationText.setText(equationText.getText() + answerText.getText());
-
+                    equationText.setText(equationText.getText() + ")");
                 }
-                equationText.setText(equationText.getText() + ")");
+                //如果最后一个符号是计算符，则不添加右括号
+                else if (getEqautionLastOperation(equationText.getText()).matches("[+-×÷^]")) {
+                }
                 answerText.setText("0");
                 calculated = false;
             }
         }
         //处理开方
+        //处理阶乘
+        //处理三角函数
+        // 处理EXP
+        //处理10幂函数
         if (etext.equals(ButtonMapper.ROOT_BTN)
             || etext.equals(ButtonMapper.FRACTION_BTN)
-            || etext.equals(ButtonMapper.SQUARE_BTN)) {
+            || etext.equals(ButtonMapper.SQUARE_BTN)
+            || etext.equals(ButtonMapper.FACTORIAL_BTN)
+            || etext.equals(ButtonMapper.SIN_BTN)
+            || etext.equals(ButtonMapper.COS_BTN)
+            || etext.equals(ButtonMapper.TAN_BTN)
+            || etext.equals(ButtonMapper.EXP_BTN)
+            || etext.equals(ButtonMapper.TEN_POW_BTN)) {
             if (answerText.getText().isEmpty()) {
                 return;
             }
             answerText.setText(String.valueOf(parser.singleCalculate(answerText.getText(), etext)));
             clearEquationText();
+            calculated = true;
         }
-        //处理阶乘
-        //处理幂函数
-        //处理pi
-        //处理三角函数
-        //处理EXP
-        //处理10幂函数
+
         //处理小数点
         if (etext.equals(ButtonMapper.DOT_BTN)) {
             //如果答案栏中包含小数点
@@ -546,10 +559,12 @@ public class interfaceController {
                 }
                 if (getCurrentEquationText().equals(equation_text2)) {
                     System.out.println(equationText.getText());
-                    if (!getEqautionLastOperation(getCurrentEquationText().getText()).equals(")")) {
-                        ans = parser.calculateInOrder(equationText.getText() + answerText.getText());
-                    } else {
-                        ans = parser.calculateInOrder(equationText.getText());
+                    if (!equationText.getText().isEmpty()) {
+                        if (!getEqautionLastOperation(getCurrentEquationText().getText()).equals(")")) {
+                            ans = parser.calculateInOrder(equationText.getText() + answerText.getText());
+                        } else {
+                            ans = parser.calculateInOrder(equationText.getText());
+                        }
                     }
                     calculated = true;
                     clearEquationText();

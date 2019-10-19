@@ -27,11 +27,11 @@ public class ButtonMapper {
     public static String ROOT_BTN = "ROOT";
     public static String SQUARE_BTN = "SQUARE";
     public static String FRACTION_BTN = "FRACTION";
-    public static String PI_BTN = "PI";
+    public static String PI_BTN = "π";
     public static String FACTORIAL_BTN = "FACTORIAL";
     public static String TEN_POW_BTN = "TEN_POW";
     public static String EXP_BTN = "EXP";
-    public static String POWER_BTN = "POWER";
+    public static String POWER_BTN = "^";
     public static String SIN_BTN = "SIN";
     public static String COS_BTN = "COS";
     public static String TAN_BTN = "TAN";

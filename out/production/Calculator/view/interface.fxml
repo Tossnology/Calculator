@@ -18,7 +18,7 @@
                         <MenuItem mnemonicParsing="false" onAction="#handleScience" text="科学" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" onAction="#handleHistory" text="历史" />
+                <Menu mnemonicParsing="false" onAction="#handleHistory" />
               </menus>
             </MenuBar>
             <StackPane prefHeight="480.0" prefWidth="338.0">
