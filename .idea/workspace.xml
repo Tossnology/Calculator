@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab65c9c1-7f74-4461-be69-714472bbb7b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/interface.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/interface.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/interfaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/interfaceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationCM2KM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationCM2M.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationCM2MM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationG2KG.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationKG2G.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationKM2CM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationKM2M.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationKM2MM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationM2CM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationM2KM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationM2MM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationMM2CM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationMM2KM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/module/OperationMM2M.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -350,7 +363,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571118755394</updated>
       <workItem from="1571118756804" duration="61642000" />
-      <workItem from="1571417366002" duration="14703000" />
+      <workItem from="1571417366002" duration="15059000" />
     </task>
     <servers />
   </component>
@@ -387,7 +400,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88915000" />
+    <option name="totallyTimeSpent" value="89271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="773" extended-state="6" />
